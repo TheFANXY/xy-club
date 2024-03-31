@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/xy-club-subject/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/xy-club-subject-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/xy-club-subject-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/xy-club-subject-application/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/xy-club-subject-application/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/xy-club-subject-application/xy-club-subject-application-controller/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/xy-club-subject-application/xy-club-subject-application-controller/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/xy-club-subject-application/xy-club-subject-application-job/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/xy-club-subject-application/xy-club-subject-application-job/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/xy-club-subject-application/xy-club-subject-application-mq/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/xy-club-subject-application/xy-club-subject-application-mq/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/xy-club-subject-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/xy-club-subject-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/xy-club-subject-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/xy-club-subject-domain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/xy-club-subject-infra/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/xy-club-subject-infra/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/xy-club-subject-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xy-club-subject/xy-club-subject-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-parent/2.7.14/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

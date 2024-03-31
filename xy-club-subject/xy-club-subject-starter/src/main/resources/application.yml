@@ -1,0 +1,36 @@
+server:
+  port: 3000
+
+spring:
+  # TODO: 数据库【MySQL】 配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: h2PsY0NdJmSahDkIinCWtG+Q/gkVJBOG4v+SGkI7byy7eQtfVUVXOb3TEB4u5fRDmcx73ulfTWJZGoKPsJMcYg==
+    url: jdbc:mysql://localhost:3306/xy-club?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 20
+      min-idle: 20
+      connectionProperties: config.decrypt=true;config.decrypt.key=${publicKey};
+      max-active: 100
+      max-wait: 60000
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        login-username: admin
+        login-password: 123456
+      filter:
+        stat:
+          enabled: true
+          slow-sql-millis: 2000
+          log-slow-sql: true
+        wall:
+          enabled: true
+        # 为了开启 Druid 配置的设置 完成密码密文和公钥配置
+        config:
+          enabled: true
+
+publicKey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMTzLlMjpi8yQ+SBoqnTVKoxsScbTZPWnyzFXiXkZ9vTu0GSr9XATr2A1i2mjef2XbT7MxHiYL4ECc0IxEUy6usCAwEAAQ==
+logging:
+  config: classpath:log4j2-spring.xml
