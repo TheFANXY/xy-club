@@ -16,8 +16,7 @@ import java.util.List;
 public interface SubjectCategoryDomainService {
 
     /**
-     * 查询题目主分类列表
-     * @return 题目主分类列表
+     * 查询题目分类
      */
     List<SubjectCategoryBO> queryCategory(SubjectCategoryBO subjectCategoryBO);
 

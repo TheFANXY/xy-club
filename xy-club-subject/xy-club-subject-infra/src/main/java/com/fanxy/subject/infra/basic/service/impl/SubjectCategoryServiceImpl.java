@@ -7,7 +7,7 @@ import com.fanxy.subject.infra.basic.service.SubjectCategoryService;
 import org.springframework.stereotype.Service;
 
 /**
-* @author 86177
+* @author Fanxy
 * @description 针对表【subject_category(题目分类)】的数据库操作Service实现
 * @createDate 2024-03-17 20:42:07
 */

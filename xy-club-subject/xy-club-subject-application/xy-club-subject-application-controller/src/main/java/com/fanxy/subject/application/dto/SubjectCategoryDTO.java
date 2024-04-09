@@ -8,13 +8,14 @@ import lombok.Data;
 
 import java.io.Serializable;
 
-@TableName(value ="subject_category")
+/**
+ * 题目分类DTO
+ */
 @Data
 public class SubjectCategoryDTO implements Serializable {
     /**
-     * 主键
-     */
-    @TableId(type = IdType.AUTO)
+    * 主键
+    */
     private Long id;
 
     /**
@@ -37,6 +38,5 @@ public class SubjectCategoryDTO implements Serializable {
      */
     private Long parentId;
 
-    @TableField(exist = false)
     private static final long serialVersionUID = 1125L;
 }

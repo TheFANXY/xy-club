@@ -32,32 +32,43 @@ public class SubjectCategoryDomainServiceImpl implements SubjectCategoryDomainSe
     /**
      * 增加分类
      *
-     * @param subjectCategoryBO
+     * @param subjectCategoryBO 分类BO
+     * @return 是否成功
      */
     @Override
     public Boolean add(SubjectCategoryBO subjectCategoryBO) {
         if (log.isInfoEnabled()) {
-            log.info("SubjectCategoryController.add.bo:{}", JSON.toJSONString(subjectCategoryBO));
+            log.info("SubjectCategoryDomainServiceImpl.add.bo:{}", JSON.toJSONString(subjectCategoryBO));
         }
         SubjectCategory subjectCategory = SubjectCategoryConverter.INSTANCE.
                 convertBoToCategory(subjectCategoryBO);
         return subjectCategoryService.save(subjectCategory);
     }
 
+    /**
+     * 更新分类
+     * @param subjectCategoryBO 分类BO
+     * @return 是否成功
+     */
     @Override
     public Boolean update(SubjectCategoryBO subjectCategoryBO) {
         if (log.isInfoEnabled()) {
-            log.info("SubjectCategoryController.update.bo:{}", JSON.toJSONString(subjectCategoryBO));
+            log.info("SubjectCategoryDomainServiceImpl.update.bo:{}", JSON.toJSONString(subjectCategoryBO));
         }
         SubjectCategory subjectCategory = SubjectCategoryConverter.INSTANCE.
                 convertBoToCategory(subjectCategoryBO);
         return subjectCategoryService.updateById(subjectCategory);
     }
 
+    /**
+     * 删除分类
+     * @param subjectCategoryBO 分类BO
+     * @return 是否成功
+     */
     @Override
     public Boolean delete(SubjectCategoryBO subjectCategoryBO) {
         if (log.isInfoEnabled()) {
-            log.info("SubjectCategoryController.delete.bo:{}", JSON.toJSONString(subjectCategoryBO));
+            log.info("SubjectCategoryDomainServiceImpl.delete.bo:{}", JSON.toJSONString(subjectCategoryBO));
         }
         SubjectCategory subjectCategory = SubjectCategoryConverter.INSTANCE.
                 convertBoToCategory(subjectCategoryBO);
@@ -65,10 +76,10 @@ public class SubjectCategoryDomainServiceImpl implements SubjectCategoryDomainSe
     }
 
     /**
-     * 查询主分类
+     * 查询分类
      *
-     * @param subjectCategoryBO
-     * @return
+     * @param subjectCategoryBO 分类BO
+     * @return 分类列表集合
      */
     @Override
     public List<SubjectCategoryBO> queryCategory(SubjectCategoryBO subjectCategoryBO) {
@@ -81,7 +92,7 @@ public class SubjectCategoryDomainServiceImpl implements SubjectCategoryDomainSe
         List<SubjectCategoryBO> boList = SubjectCategoryConverter.INSTANCE.
                 convertCategoryListToBOList(subjectCategoryList);
         if (log.isInfoEnabled()) {
-            log.info("SubjectCategoryController.queryPrimaryCategory.bo:{}", JSON.toJSONString(subjectCategoryBO));
+            log.info("SubjectCategoryDomainServiceImpl.queryCategory.bo:{}", JSON.toJSONString(subjectCategoryBO));
         }
         return boList;
     }

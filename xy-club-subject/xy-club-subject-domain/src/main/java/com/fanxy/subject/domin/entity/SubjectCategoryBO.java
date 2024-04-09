@@ -5,13 +5,12 @@ import lombok.Data;
 
 import java.io.Serializable;
 
-@TableName(value ="subject_category")
+
 @Data
 public class SubjectCategoryBO implements Serializable {
     /**
      * 主键
      */
-    @TableId(type = IdType.AUTO)
     private Long id;
 
     /**
@@ -34,6 +33,5 @@ public class SubjectCategoryBO implements Serializable {
      */
     private Long parentId;
 
-    @TableField(exist = false)
     private static final long serialVersionUID = 112415L;
 }

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fanxy.subject.infra.basic.mapper.SubjectMultipleMapper">
+
+    <resultMap id="BaseResultMap" type="com.fanxy.subject.infra.basic.entity.SubjectMultiple">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="subjectId" column="subject_id" jdbcType="BIGINT"/>
+            <result property="optionType" column="option_type" jdbcType="BIGINT"/>
+            <result property="optionContent" column="option_content" jdbcType="VARCHAR"/>
+            <result property="isCorrect" column="is_correct" jdbcType="TINYINT"/>
+            <result property="createdBy" column="created_by" jdbcType="VARCHAR"/>
+            <result property="createdTime" column="created_time" jdbcType="TIMESTAMP"/>
+            <result property="updateBy" column="update_by" jdbcType="VARCHAR"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="isDeleted" column="is_deleted" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,subject_id,option_type,
+        option_content,is_correct,created_by,
+        created_time,update_by,update_time,
+        is_deleted
+    </sql>
+</mapper>
