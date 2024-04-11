@@ -87,10 +87,9 @@ public class SubjectController {
             // 参数校验
             Preconditions.checkNotNull(subjectInfoDTO.getCategoryId(), "分类Id不能为空");
             Preconditions.checkNotNull(subjectInfoDTO.getLabelId(), "标签Id不能为空");
+            // 这里不需要显式的把 PageSize和PageNo传递给Bo 因为两个人都继承 PageInfo 故转化器能把同名参数值传递
             SubjectInfoBO subjectInfoBO = SubjectInfoDTOConverter.INSTANCE.
                     convertDtoToInfoBO(subjectInfoDTO);
-            subjectInfoBO.setPageNo(subjectInfoDTO.getPageNo());
-            subjectInfoBO.setPageSize(subjectInfoDTO.getPageSize());
             PageResult<SubjectInfoBO> boPageResult = subjectInfoDomainService.getSubjectPage(subjectInfoBO);
             return  Result.ok(boPageResult);
         } catch (Exception e) {

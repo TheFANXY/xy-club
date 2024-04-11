@@ -25,6 +25,8 @@ public class PageInfo implements Serializable {
      */
     private static final Integer DEFAULT_PAGE_SIZE = 20;
 
+    private static final Integer MIN_PAGE_SIZE = 1;
+
     private Integer pageNo = DEFAULT_PAGE_NO;
 
     private Integer pageSize = DEFAULT_PAGE_SIZE;
@@ -35,10 +37,13 @@ public class PageInfo implements Serializable {
         }
         return pageNo;
     }
+
     public Integer getPageSize() {
-        if (pageSize == null || pageSize < DEFAULT_PAGE_SIZE || pageSize > Integer.MAX_VALUE) {
+        if (this.pageSize == null || pageSize < MIN_PAGE_SIZE) {
             return DEFAULT_PAGE_SIZE;
         }
         return pageSize;
     }
+
+    private static final long serialVersionUID = -123155235117879215L;
 }

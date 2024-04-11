@@ -92,6 +92,10 @@ public class SubjectInfoDomainServiceImpl implements SubjectInfoDomainService {
         if (count == 0) {
             return pageResult;
         }
+        // 如果 start 已经大于总数 说明已经没有符合条件的数据 无需交互数据库 直接返回空实体即可
+        if (start - 1 > count) {
+            return pageResult;
+        }
         // 根据数量 起始页码 以及类别和标签条件 查询分页需要查询的集合列表
         List<SubjectInfo> subjectInfoList = subjectInfoService.queryPage(subjectInfo, subjectInfoBO.getCategoryId(),
                 subjectInfoBO.getLabelId(), start, subjectInfoBO.getPageSize());

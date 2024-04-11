@@ -1,5 +1,6 @@
 package com.fanxy.subject.domin.handler.subject;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.fanxy.subject.common.enums.SubjectInfoTypeEnum;
 import com.fanxy.subject.domin.convert.BriefSubjectConverter;
 import com.fanxy.subject.domin.entity.SubjectInfoBO;
@@ -38,7 +39,9 @@ public class BriefTypeHandler implements SubjectTypeHandler{
 
     @Override
     public SubjectOptionBO query(int subjectId) {
-        SubjectBrief subjectBrief = subjectBriefService.getById(subjectId);
+        QueryWrapper<SubjectBrief> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("subject_id", subjectId);
+        SubjectBrief subjectBrief = subjectBriefService.getOne(queryWrapper);
         SubjectOptionBO subjectOptionBO = new SubjectOptionBO();
         subjectOptionBO.setSubjectAnswer(subjectBrief.getSubjectAnswer());
         return subjectOptionBO;
