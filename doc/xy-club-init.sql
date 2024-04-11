@@ -164,7 +164,7 @@ DROP TABLE IF EXISTS `subject_brief`;
 CREATE TABLE `subject_brief`
 (
     `id`             bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
-    `subject_id`     int(20)     DEFAULT NULL COMMENT '题目id',
+    `subject_id`     bigint(20)     DEFAULT NULL COMMENT '题目id',
     `subject_answer` text COMMENT '题目答案',
     `created_by`     varchar(32) DEFAULT NULL COMMENT '创建人',
     `created_time`   datetime    DEFAULT NULL COMMENT '创建时间',
@@ -315,8 +315,6 @@ CREATE TABLE `subject_mapping`
 -- ----------------------------
 -- Records of subject_mapping
 -- ----------------------------
-INSERT INTO `subject_mapping`
-VALUES ('216', '100', '2', '1', null, null, null, null, '0');
 
 -- ----------------------------
 -- Table structure for subject_multiple
