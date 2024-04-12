@@ -17,9 +17,6 @@
     <module>xy-club-subject-infra</module>
     <module>xy-club-subject-starter</module>
     <module>xy-club-subject-api</module>
-    <module>xy-club-subject-application/xy-club-subject-application-controller</module>
-    <module>xy-club-subject-application/xy-club-subject-application-job</module>
-    <module>xy-club-subject-application/xy-club-subject-application-mq</module>
   </modules>
 
   <properties>
