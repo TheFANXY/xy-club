@@ -6,6 +6,7 @@
 
   <groupId>com.fanxy</groupId>
   <artifactId>xy-club-subject</artifactId>
+  <description>xy-club-题目领域服务</description>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>xy-club-subject</name>
