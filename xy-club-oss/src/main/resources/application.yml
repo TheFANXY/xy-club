@@ -1,0 +1,7 @@
+server:
+  port: 4000
+
+minio:
+  url: http://101.42.252.133:9000
+  accessKey: minioadmin
+  secretKey: 3663573wxf

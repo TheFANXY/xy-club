@@ -14,6 +14,7 @@
         <module name="xy-club-subject-infra" />
         <module name="xy-club-subject-application-controller" />
         <module name="xy-club-subject-starter" />
+        <module name="xy-club-oss" />
         <module name="xy-club-subject-api" />
       </profile>
     </annotationProcessing>

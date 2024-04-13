@@ -2,11 +2,14 @@ package com.fanxy.subject.domin.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.fanxy.subject.common.enums.CategoryTypeEnum;
 import com.fanxy.subject.domin.convert.SubjectLabelConverter;
 import com.fanxy.subject.domin.entity.SubjectLabelBO;
 import com.fanxy.subject.domin.service.SubjectLabelDomainService;
+import com.fanxy.subject.infra.basic.entity.SubjectCategory;
 import com.fanxy.subject.infra.basic.entity.SubjectLabel;
 import com.fanxy.subject.infra.basic.entity.SubjectMapping;
+import com.fanxy.subject.infra.basic.service.SubjectCategoryService;
 import com.fanxy.subject.infra.basic.service.SubjectLabelService;
 import com.fanxy.subject.infra.basic.service.SubjectMappingService;
 import lombok.extern.slf4j.Slf4j;
@@ -33,6 +36,9 @@ public class SubjectLabelDomainServiceImpl implements SubjectLabelDomainService 
 
     @Resource
     SubjectLabelService subjectLabelService;
+
+    @Resource
+    SubjectCategoryService subjectCategoryService;
     @Resource
     SubjectMappingService subjectMappingService;
 
@@ -89,7 +95,16 @@ public class SubjectLabelDomainServiceImpl implements SubjectLabelDomainService 
             log.info("SubjectLabelDomainServiceImpl.queryLabelByCategoryId.bo:{}",
                     JSON.toJSONString(subjectLabelBO));
         }
+        // 如果当前分类是1级分类，则查询所有标签
         Long categoryId = subjectLabelBO.getCategoryId();
+        SubjectCategory subjectCategory = subjectCategoryService.getById(categoryId);
+        if (CategoryTypeEnum.PRIMARY.getCode() == subjectCategory.getCategoryType()) {
+            QueryWrapper<SubjectLabel> queryWrapper = new QueryWrapper<>();
+            queryWrapper.eq("category_id", categoryId);
+            List<SubjectLabel> labelList = subjectLabelService.list(queryWrapper);
+            return SubjectLabelConverter.INSTANCE.convertLabelListToBOList(labelList);
+        }
+        // 如果不是1级分类 则根据关联表查询符合条件标签
         QueryWrapper<SubjectMapping> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("category_id", categoryId);
         queryWrapper.select("DISTINCT label_id");

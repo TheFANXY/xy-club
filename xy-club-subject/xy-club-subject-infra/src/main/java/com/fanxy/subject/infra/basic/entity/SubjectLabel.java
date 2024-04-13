@@ -1,10 +1,10 @@
 package com.fanxy.subject.infra.basic.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
-import lombok.Data;
 
 /**
  * 题目标签表
@@ -30,7 +30,7 @@ public class SubjectLabel implements Serializable {
     private Integer sortNum;
 
     /**
-     *
+     * 分类id
      */
     private Long categoryId;
 

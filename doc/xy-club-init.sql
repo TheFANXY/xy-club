@@ -164,7 +164,7 @@ DROP TABLE IF EXISTS `subject_brief`;
 CREATE TABLE `subject_brief`
 (
     `id`             bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
-    `subject_id`     bigint(20)     DEFAULT NULL COMMENT '题目id',
+    `subject_id`     bigint(20)  DEFAULT NULL COMMENT '题目id',
     `subject_answer` text COMMENT '题目答案',
     `created_by`     varchar(32) DEFAULT NULL COMMENT '创建人',
     `created_time`   datetime    DEFAULT NULL COMMENT '创建时间',
@@ -275,7 +275,7 @@ CREATE TABLE `subject_label`
     `id`           bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
     `label_name`   varchar(32) DEFAULT NULL COMMENT '标签分类',
     `sort_num`     int(11)     DEFAULT NULL COMMENT '排序',
-    `category_id`  varchar(50) DEFAULT NULL,
+    `category_id`  bigint(20) DEFAULT NULL,
     `created_by`   varchar(32) DEFAULT NULL COMMENT '创建人',
     `created_time` datetime    DEFAULT NULL COMMENT '创建时间',
     `update_by`    varchar(32) DEFAULT NULL COMMENT '更新人',
