@@ -6,6 +6,11 @@
       <list>
         <option value="$PROJECT_DIR$/xy-club-subject/pom.xml" />
         <option value="$PROJECT_DIR$/xy-club-oss/pom.xml" />
+        <option value="$PROJECT_DIR$/xy-club-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/xy-club-auth/pom.xml" />
+        <option value="$PROJECT_DIR$/xy-club-auth/xy-club-auth-application/xy-club-auth-application-controller/pom.xml" />
+        <option value="$PROJECT_DIR$/xy-club-auth/xy-club-auth-application/xy-club-auth-application-job/pom.xml" />
+        <option value="$PROJECT_DIR$/xy-club-auth/xy-club-auth-application/xy-club-auth-application-mq/pom.xml" />
       </list>
     </option>
   </component>

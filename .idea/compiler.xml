@@ -7,17 +7,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="xy-club-subject-domain" />
         <module name="xy-club-subject-application-mq" />
+        <module name="xy-club-auth-api" />
         <module name="xy-club-subject-application-job" />
-        <module name="xy-club-subject-common" />
         <module name="xy-club-subject-infra" />
         <module name="xy-club-subject-application-controller" />
+        <module name="xy-club-auth-application-controller" />
         <module name="xy-club-subject-starter" />
         <module name="xy-club-oss" />
         <module name="xy-club-subject-api" />
+        <module name="xy-club-gateway" />
+        <module name="xy-club-auth-starter" />
+        <module name="xy-club-auth-application-mq" />
+        <module name="xy-club-subject-domain" />
+        <module name="xy-club-auth-infra" />
+        <module name="xy-club-auth-common" />
+        <module name="xy-club-auth-domain" />
+        <module name="xy-club-subject-common" />
+        <module name="xy-club-auth-application-job" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="xy-club-subject (1)" target="1.5" />
+      <module name="xy-club-subject (2)" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
